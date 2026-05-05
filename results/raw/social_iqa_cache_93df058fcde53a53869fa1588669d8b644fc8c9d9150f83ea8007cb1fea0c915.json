@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate one plausible adult human participant in the United States.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Riley was in pain.\nQuestion: How would Riley feel afterwards?\nOptions:\nA. aware\nB. Painful\nC. Great\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 115
+  },
+  "response": {
+    "answer": "A",
+    "reason": "After being in pain, Riley would probably feel more aware of their body or situation."
+  },
+  "usage": {
+    "completion_tokens": 31,
+    "prompt_tokens": 133,
+    "total_tokens": 164,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:19:44.879825"
+}

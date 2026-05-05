@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- I am athletic.\n- I have never broken a bone.\n- I am a freshman in college.\n- My favorite food is pizza.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Jesse set Robin's case on fire. Robin was very angry and called the cops on her.\nQuestion: What will happen to Jesse?\nOptions:\nA. go to heaven\nB. get revenge\nC. go to jail\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2043
+  },
+  "response": {
+    "answer": "C",
+    "reason": "Jesse might go to jail for setting Robin's case on fire and getting the cops called."
+  },
+  "usage": {
+    "completion_tokens": 33,
+    "prompt_tokens": 176,
+    "total_tokens": 209,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:17:35.030388"
+}

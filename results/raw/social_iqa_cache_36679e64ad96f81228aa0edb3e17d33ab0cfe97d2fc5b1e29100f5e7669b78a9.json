@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- I went on welfare last month , which makes me want to run into traffic in front of big trucks.\n- I am a carnivore.\n- My father is in prison.\n- My favorite band is creed.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Sasha made Kai mad by messing with them.\nQuestion: How would you describe Sasha?\nOptions:\nA. joking around\nB. annoying to Kai\nC. being mean to Kai\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2064
+  },
+  "response": {
+    "answer": "B",
+    "reason": "Sasha did something that made Kai mad, so that's annoying to Kai."
+  },
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 182,
+    "total_tokens": 211,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:21:48.027856"
+}

@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate an Asian American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Sydney appeared wounded, on the ground, so Kia Crowded around Sydney to assess the damage.\nQuestion: What does Kai need to do before this?\nOptions:\nA. go to the hospital next\nB. Be worried\nC. Panic\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 1081
+  },
+  "response": {
+    "answer": "B",
+    "reason": "Kia would probably feel worried before doing anything else."
+  },
+  "usage": {
+    "completion_tokens": 25,
+    "prompt_tokens": 165,
+    "total_tokens": 190,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:20:37.744482"
+}

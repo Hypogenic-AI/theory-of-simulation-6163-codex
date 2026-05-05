@@ -1,0 +1,14 @@
+PDF: papers/llms_assume_people_are_more_rational.pdf
+Total pages: 26
+Pages per chunk: 3
+
+Chunks:
+  llms_assume_people_are_more_rational_chunk_001.pdf: pages 1-3
+  llms_assume_people_are_more_rational_chunk_002.pdf: pages 4-6
+  llms_assume_people_are_more_rational_chunk_003.pdf: pages 7-9
+  llms_assume_people_are_more_rational_chunk_004.pdf: pages 10-12
+  llms_assume_people_are_more_rational_chunk_005.pdf: pages 13-15
+  llms_assume_people_are_more_rational_chunk_006.pdf: pages 16-18
+  llms_assume_people_are_more_rational_chunk_007.pdf: pages 19-21
+  llms_assume_people_are_more_rational_chunk_008.pdf: pages 22-24
+  llms_assume_people_are_more_rational_chunk_009.pdf: pages 25-26

@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant in a behavioral economics study. Decide whether the participant accepts or rejects the offer. Return strict JSON with keys decision and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate an Asian American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Simulate whether this participant accepts or rejects the offer below.\n\nScenario:\nAnother player receives $10. They keep $7 for themselves and offer $3 to you.\nIf you accept, you get $3 and the other player keeps $7.\nIf you reject, both of you get $0.\n\nReturn JSON:\n{\n  \"decision\": \"accept or reject\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.9,
+    "max_tokens": 120,
+    "seed": 10545
+  },
+  "response": {
+    "decision": "accept",
+    "reason": "Getting $3 is better than nothing, even though the offer isn't fair."
+  },
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 151,
+    "total_tokens": 180,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:24:50.525842"
+}

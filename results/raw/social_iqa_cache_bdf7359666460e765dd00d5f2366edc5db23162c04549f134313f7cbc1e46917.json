@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate an Asian American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Carson looked into Robin's eyes and shook her head no after asking Carson out.\nQuestion: What will Robin want to do next?\nOptions:\nA. spank Carson hard\nB. laugh in Carson's face\nC. slap Carson across the face\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 1111
+  },
+  "response": {
+    "answer": "B",
+    "reason": "Laughing might be a way to cover embarrassment or awkwardness after rejection."
+  },
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 167,
+    "total_tokens": 196,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:21:04.440894"
+}

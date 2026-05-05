@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- I am a karate black belt.\n- I love to sing.\n- My wife has terminal cancer.\n- I am a business man.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Carson angrily turned Sydney's music down without their permission in protest of the noise.\nQuestion: What will Sydney want to do next?\nOptions:\nA. ask Carson why\nB. have some quiet\nC. buy a new stereo\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2070
+  },
+  "response": {
+    "answer": "A",
+    "reason": "Sydney will likely want to know why Carson turned the music down without asking."
+  },
+  "usage": {
+    "completion_tokens": 29,
+    "prompt_tokens": 178,
+    "total_tokens": 207,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:21:52.775324"
+}

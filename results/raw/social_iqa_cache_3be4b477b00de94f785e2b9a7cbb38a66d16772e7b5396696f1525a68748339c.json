@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- I am six feet tall.\n- I like to go to the opera.\n- My favorite auto is a bentley.\n- I love to vacation in paris.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Kendall didn't get the job despite the interviewer telling her she was qualified.\nQuestion: How would the interviewer feel as a result?\nOptions:\nA. like Kendall was the best\nB. happy for Kendall\nC. like they lied to Kendall\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2102
+  },
+  "response": {
+    "answer": "C",
+    "reason": "The interviewer might feel like they lied to Kendall by saying she was qualified but not giving her the job."
+  },
+  "usage": {
+    "completion_tokens": 35,
+    "prompt_tokens": 184,
+    "total_tokens": 219,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:22:23.877735"
+}

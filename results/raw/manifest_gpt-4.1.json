@@ -1,0 +1,6 @@
+{
+  "model": "gpt-4.1",
+  "social_iqa_raw": "/workspaces/theory-of-simulation-6163-codex/results/raw/social_iqa_gpt-4.1.jsonl",
+  "ultimatum_raw": "/workspaces/theory-of-simulation-6163-codex/results/raw/ultimatum_gpt-4.1.jsonl",
+  "metadata": "/workspaces/theory-of-simulation-6163-codex/results/raw/run_metadata_gpt-4.1.json"
+}

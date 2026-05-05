@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "stages": {
+    "resource_finder": {
+      "success": true,
+      "completion_marker": "/workspaces/theory-of-simulation-6163-codex/.resource_finder_complete",
+      "outputs": {
+        "literature_review": "/workspaces/theory-of-simulation-6163-codex/literature_review.md",
+        "resources_catalog": "/workspaces/theory-of-simulation-6163-codex/resources.md",
+        "papers_dir": "/workspaces/theory-of-simulation-6163-codex/papers",
+        "datasets_dir": "/workspaces/theory-of-simulation-6163-codex/datasets",
+        "code_dir": "/workspaces/theory-of-simulation-6163-codex/code"
+      },
+      "log_file": "/workspaces/theory-of-simulation-6163-codex/logs/resource_finder_codex.log",
+      "transcript_file": "/workspaces/theory-of-simulation-6163-codex/logs/resource_finder_codex_transcript.jsonl",
+      "elapsed_time": 545.1648371219635
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 1213.0658402442932,
+      "log_file": "/workspaces/theory-of-simulation-6163-codex/logs/execution_codex.log",
+      "transcript_file": "/workspaces/theory-of-simulation-6163-codex/logs/execution_codex_transcript.jsonl"
+    }
+  },
+  "work_dir": "/workspaces/theory-of-simulation-6163-codex"
+}

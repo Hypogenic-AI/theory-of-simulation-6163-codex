@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a Latino American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Casey is talented and well liked by others.\nQuestion: What will Casey want to do next?\nOptions:\nA. relax\nB. learn songs\nC. perform well and talk to others\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 1104
+  },
+  "response": {
+    "answer": "C",
+    "reason": "Casey seems motivated and social, so performing well and talking to others fits."
+  },
+  "usage": {
+    "completion_tokens": 30,
+    "prompt_tokens": 155,
+    "total_tokens": 185,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:20:57.694663"
+}

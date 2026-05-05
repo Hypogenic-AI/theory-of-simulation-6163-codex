@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- My favorite band is muse.\n- I am leaving for college in three months.\n- My father is a mechanic.\n- I work at walmart as a stocker.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Taylor made a poisonous bracelet. Taylor put it on Sasha's wrist.\nQuestion: What will happen to Taylor?\nOptions:\nA. take the bracelet off\nB. be convicted\nC. be poisoned\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2086
+  },
+  "response": {
+    "answer": "B",
+    "reason": "Taylor could get in trouble with the law for poisoning someone."
+  },
+  "usage": {
+    "completion_tokens": 26,
+    "prompt_tokens": 177,
+    "total_tokens": 203,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:22:06.039924"
+}

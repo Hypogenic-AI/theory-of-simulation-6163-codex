@@ -1,0 +1,22 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Large language models are already being used as synthetic users, survey respondents, and behavioral stand-ins. That trend raises a narrow but important question: when does a model simulate people, rather than merely produce plausible text about people? If an LLM collapses toward an articulate, cooperative, average-seeming participant, then evaluations built on top of it will miss the disagreement, irrationality, and subgroup structure that often matter most.
+
+Prior work shows that LLMs can replicate some human-subject findings, express persona-like differences, and support believable agent interactions \cite{park2023generative,aher2023using,xie2024trust,sorokovikova2024bigfive}. At the same time, several studies argue that these successes can be misleading. Population alignment remains uneven across demographic groups \cite{santurkar2023opinions}, models often look more rational than real people \cite{liu2025rational}, and long-horizon simulation benchmarks expose strong homogenization and positivity biases \cite{chen2026omnibehavior}. The missing piece is a theory of simulation that distinguishes stylistic plausibility from distributional validity.
+
+{\bf What is a useful theory of simulation?} We define simulation with three requirements. First, a simulator should show {\it local fidelity}: it should match known human-style judgments on benchmarked tasks. Second, it should show {\it latent-factor responsiveness}: changing relevant conditioning variables such as persona or demographics should change behavior in coherent ways. Third, it should show {\it coverage}: the simulator should preserve a plausible range of outcomes rather than collapsing onto a narrow average. This last requirement is the hardest one, and it is the one most directly tied to the claim that LLMs can simulate a superset of human outcomes.
+
+We study this question with one model family and two complementary tasks. We query \gptfourone through the chat completions API under three prompt conditions: unconditioned, demographic-conditioned, and persona-conditioned. We then evaluate a labeled social reasoning benchmark, \socialiqa, and a Turing-Experiment-style ultimatum game adapted from local replication assets \cite{aher2023using}. The first task measures local judgment fidelity. The second probes distributional behavior by asking whether the model produces distinct acceptance policies once latent factors are varied.
+
+Our experiments point to a middle position. Persona conditioning improves \socialiqa accuracy from 0.744 to 0.789, a 4.4-point gain over the unconditioned baseline and an 8.9-point gain over demographic conditioning. It also expands observed ultimatum policies from 2 to 5 distinct profiles. However, all three conditions accept unfair offers much too early: mean acceptance thresholds remain between 2.40 and 2.67 on a 1--9 offer scale, and every condition accepts offers of 3 or higher almost universally. These results suggest that conditioning broadens the behavioral manifold without recovering human-like tails.
+
+We make four contributions:
+\begin{itemize}
+\item We propose a simple theory of LLM simulation based on local fidelity, latent-factor responsiveness, and coverage.
+\item We conduct two real-API experiments on \gptfourone that separate pointwise social-judgment accuracy from distributional game behavior.
+\item We show that persona conditioning can improve fidelity and widen support at the same time, but the added variation remains compressed within a cooperative policy family.
+\item We argue that LLM simulators should be validated separately for fidelity, subgroup structure, and tail coverage rather than treated as drop-in substitutes for human populations.
+\end{itemize}
+
+The rest of the paper is organized as follows. \Secref{sec:related_work} situates our study within prior work on human simulation and behavioral alignment. \Secref{sec:methodology} describes the tasks, prompting conditions, and metrics. \Secref{sec:results} reports the main empirical findings, and \Secref{sec:discussion} discusses their theoretical implications and limitations.

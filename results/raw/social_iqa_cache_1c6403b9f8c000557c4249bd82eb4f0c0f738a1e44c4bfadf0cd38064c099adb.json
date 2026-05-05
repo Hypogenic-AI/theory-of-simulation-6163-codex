@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate an African American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Sasha was the most popular girl in school when she accepted Jordan's invitation to go on a date.\nQuestion: What will Jordan want to do next?\nOptions:\nA. Plan a best friends outing with Sasha\nB. Plan a romantic evening with Sasha\nC. Go on a date with Valerie\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 1099
+  },
+  "response": {
+    "answer": "B",
+    "reason": "Jordan invited Sasha on a date, so he will probably want to plan a romantic evening."
+  },
+  "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 176,
+    "total_tokens": 208,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:20:54.257551"
+}

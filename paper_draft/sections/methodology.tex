@@ -1,0 +1,31 @@
+\section{Methodology}
+\label{sec:methodology}
+
+\para{Simulation criteria.} We evaluate LLM simulation through three requirements. {\it Local fidelity} measures whether the model matches known human-style answers on benchmarked tasks. {\it Latent-factor responsiveness} measures whether meaningful conditioning variables, such as persona or demographics, produce coherent behavioral differences. {\it Coverage} measures whether the resulting behaviors span a plausible range of outcomes rather than collapsing toward one default policy. We use one task for local fidelity and one for distributional coverage because a single benchmark cannot establish all three requirements.
+
+\subsection{Model and Prompt Conditions}
+
+We use \gptfourone as the sole simulator, queried through the `v1/chat/completions` endpoint on May 5, 2026 \cite{openai2026gpt41}. This design keeps model capacity fixed so that differences can be attributed to conditioning rather than architecture. For \socialiqa, we use temperature 0.8 and a 120-token completion cap. For the ultimatum game, we use temperature 0.9 and the same token cap. The evaluation harness uses deterministic integer seeds per condition and item or participant, as implemented in the local runner.
+
+We compare three prompting conditions:
+\begin{itemize}
+\item \textsc{Unconditioned}: a generic plausible U.S. adult participant.
+\item \textsc{Demographic}: one of four demographic role prompts, cycled across participants.
+\item \textsc{Persona}: one of 15 concise persona profiles with four stable traits each.
+\end{itemize}
+
+\subsection{Tasks and Data}
+
+\para{\socialiqa fidelity benchmark.} We sample 90 roughly label-balanced validation examples from the local \socialiqa mirror. For each item, the model sees a short scenario, a question, three answer choices, and a role prompt describing the simulated participant. The target metric is exact-choice accuracy against the dataset label, along with macro-F1 and answer entropy.
+
+\para{Ultimatum-game distribution benchmark.} We adapt a prompt scaffold from the local Turing Experiments assets \cite{aher2023using}. For each condition, we simulate 15 synthetic participants. Each participant receives offers from 1 to 9 dollars out of a 10-dollar split and decides whether to accept or reject. From these decisions we infer the first accepted offer as the participant's acceptance threshold, compute a participant-level policy string such as \texttt{RRAAAAAAA}, and measure monotonicity violations, policy entropy, and the number of distinct policy profiles.
+
+\subsection{Metrics and Statistical Reporting}
+
+For \socialiqa, we report accuracy, bootstrap 95\% confidence intervals, macro-F1, answer entropy, and pairwise condition comparisons using an exact McNemar-style proxy on discordant items. We also compute Jensen-Shannon divergence between aggregate answer distributions to test whether conditioning changes the overall support.
+
+For the ultimatum task, we report offer-wise acceptance curves, mean acceptance threshold with bootstrap 95\% confidence intervals, threshold standard deviation, mean policy entropy, mean monotonicity violations, and the number of distinct policy profiles. We also report pairwise threshold differences with bootstrap confidence intervals.
+
+\subsection{Implementation and Cost}
+
+All experiments ran in `/workspaces/theory-of-simulation-6163-codex` with Python 3.12.8 and standard data-analysis libraries, including `openai`, `datasets`, `numpy`, `pandas`, `scipy`, `scikit-learn`, `matplotlib`, and `seaborn`. The experiments are API-based, so available GPUs were not used. Raw outputs are cached in `results/raw/`, summaries in `results/summary/`, and figures in `figures/`. Total usage was 125{,}857 tokens: 106{,}737 input tokens and 19{,}120 output tokens. Using the \gptfourone pricing listed on May 5, 2026, the full study cost approximately \$0.366 \cite{openai2026pricing}.

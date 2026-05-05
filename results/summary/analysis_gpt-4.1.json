@@ -1,0 +1,249 @@
+{
+  "social_iqa": {
+    "pairwise_js": [
+      {
+        "left": "demographic",
+        "right": "persona",
+        "js_divergence": 0.0009516218734728753
+      },
+      {
+        "left": "demographic",
+        "right": "unconditioned",
+        "js_divergence": 0.00039507332187761496
+      },
+      {
+        "left": "persona",
+        "right": "unconditioned",
+        "js_divergence": 0.002175847467274483
+      }
+    ],
+    "pairwise_tests": [
+      {
+        "left": "demographic",
+        "right": "persona",
+        "left_only_correct": 1,
+        "right_only_correct": 9,
+        "accuracy_delta_right_minus_left": 0.0888888888888889,
+        "mcnemar_exact_pvalue_proxy": 0.021484375
+      },
+      {
+        "left": "demographic",
+        "right": "unconditioned",
+        "left_only_correct": 1,
+        "right_only_correct": 5,
+        "accuracy_delta_right_minus_left": 0.04444444444444451,
+        "mcnemar_exact_pvalue_proxy": 0.21875
+      },
+      {
+        "left": "persona",
+        "right": "unconditioned",
+        "left_only_correct": 6,
+        "right_only_correct": 2,
+        "accuracy_delta_right_minus_left": -0.0444444444444444,
+        "mcnemar_exact_pvalue_proxy": 0.2890625
+      }
+    ],
+    "usage_summary": [
+      {
+        "condition": "demographic",
+        "prompt_tokens": 14789,
+        "completion_tokens": 2514,
+        "total_tokens": 17303
+      },
+      {
+        "condition": "persona",
+        "prompt_tokens": 16265,
+        "completion_tokens": 2597,
+        "total_tokens": 18862
+      },
+      {
+        "condition": "unconditioned",
+        "prompt_tokens": 13799,
+        "completion_tokens": 2560,
+        "total_tokens": 16359
+      }
+    ]
+  },
+  "ultimatum_game": {
+    "curve_rows": [
+      {
+        "condition": "demographic",
+        "offer": 1,
+        "accepted": 0.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 2,
+        "accepted": 0.6
+      },
+      {
+        "condition": "demographic",
+        "offer": 3,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 4,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 5,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 6,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 7,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 8,
+        "accepted": 1.0
+      },
+      {
+        "condition": "demographic",
+        "offer": 9,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 1,
+        "accepted": 0.26666666666666666
+      },
+      {
+        "condition": "persona",
+        "offer": 2,
+        "accepted": 0.3333333333333333
+      },
+      {
+        "condition": "persona",
+        "offer": 3,
+        "accepted": 0.8
+      },
+      {
+        "condition": "persona",
+        "offer": 4,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 5,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 6,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 7,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 8,
+        "accepted": 1.0
+      },
+      {
+        "condition": "persona",
+        "offer": 9,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 1,
+        "accepted": 0.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 2,
+        "accepted": 0.3333333333333333
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 3,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 4,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 5,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 6,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 7,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 8,
+        "accepted": 1.0
+      },
+      {
+        "condition": "unconditioned",
+        "offer": 9,
+        "accepted": 1.0
+      }
+    ],
+    "threshold_pairwise": [
+      {
+        "left": "demographic",
+        "right": "persona",
+        "mean_threshold_delta_right_minus_left": 0.1333333333333333,
+        "delta_ci_low": -0.022222222222222223,
+        "delta_ci_high": 0.29333333333333333
+      },
+      {
+        "left": "demographic",
+        "right": "unconditioned",
+        "mean_threshold_delta_right_minus_left": 0.2666666666666666,
+        "delta_ci_low": 0.17777777777777778,
+        "delta_ci_high": 0.3511111111111111
+      },
+      {
+        "left": "persona",
+        "right": "unconditioned",
+        "mean_threshold_delta_right_minus_left": 0.1333333333333333,
+        "delta_ci_low": -0.017777777777777778,
+        "delta_ci_high": 0.29024286947699185
+      }
+    ],
+    "usage_summary": [
+      {
+        "condition": "demographic",
+        "prompt_tokens": 20385,
+        "completion_tokens": 3743,
+        "total_tokens": 24128
+      },
+      {
+        "condition": "persona",
+        "prompt_tokens": 22599,
+        "completion_tokens": 3870,
+        "total_tokens": 26469
+      },
+      {
+        "condition": "unconditioned",
+        "prompt_tokens": 18900,
+        "completion_tokens": 3836,
+        "total_tokens": 22736
+      }
+    ]
+  }
+}

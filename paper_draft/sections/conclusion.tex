@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We studied a simple but consequential question: do modern LLMs simulate a superset of human outcomes once we condition them on latent human factors? Our answer is no, at least not in the strong sense. Using real API calls to \gptfourone on a labeled social-judgment benchmark and a Turing-Experiment-style ultimatum game, we find that persona conditioning improves local fidelity and widens the observed policy support, but the resulting behaviors remain compressed within a cooperative and rationalized family.
+
+The main contribution of this paper is therefore conceptual as much as empirical. A useful theory of LLM simulation should separate local fidelity, latent-factor responsiveness, and coverage. Current frontier models can satisfy the first two requirements in some settings, but they still struggle with the third. The result is not failure in an absolute sense; it is a clearer statement of what these systems are good for.
+
+Future work should restore full subgroup-distribution benchmarks such as OpinionQA, compare multiple current model families, and test richer agent architectures on longer-horizon tasks. Those extensions are necessary if the field wants to move from plausible behavioral text generation to defensible human simulation.

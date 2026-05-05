@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate a participant with these stable traits:\n- I work at amazon.\n- I live in a rural community.\n- I am fairly conservative in politics.\n- I have two kids.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Robin went to the polls and posted her ballot for the candidate she wanted.\nQuestion: What will Robin want to do next?\nOptions:\nA. bomb the candidadte\nB. attend a rally\nC. go home\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 2110
+  },
+  "response": {
+    "answer": "C",
+    "reason": "Most people just want to go home after voting, especially if they have a family."
+  },
+  "usage": {
+    "completion_tokens": 31,
+    "prompt_tokens": 176,
+    "total_tokens": 207,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:22:30.334798"
+}

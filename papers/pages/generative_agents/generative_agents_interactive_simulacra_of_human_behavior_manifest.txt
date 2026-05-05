@@ -1,0 +1,13 @@
+PDF: papers/generative_agents_interactive_simulacra_of_human_behavior.pdf
+Total pages: 22
+Pages per chunk: 3
+
+Chunks:
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_001.pdf: pages 1-3
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_002.pdf: pages 4-6
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_003.pdf: pages 7-9
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_004.pdf: pages 10-12
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_005.pdf: pages 13-15
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_006.pdf: pages 16-18
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_007.pdf: pages 19-21
+  generative_agents_interactive_simulacra_of_human_behavior_chunk_008.pdf: page 22

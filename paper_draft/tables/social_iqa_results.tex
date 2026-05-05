@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{\socialiqa local-fidelity results. Higher is better for accuracy and macro-F1. Best values are in \textbf{bold}.}
+\label{tab:social_iqa}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Condition & $N$ & Accuracy & 95\% CI & Macro-F1 & Entropy (bits) \\
+\midrule
+Demographic & 90 & 0.700 & [0.600, 0.778] & 0.701 & 1.583 \\
+Persona & 90 & \textbf{0.789} & [0.700, 0.867] & \textbf{0.789} & \textbf{1.583} \\
+Unconditioned & 90 & 0.744 & [0.644, 0.822] & 0.744 & 1.581 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

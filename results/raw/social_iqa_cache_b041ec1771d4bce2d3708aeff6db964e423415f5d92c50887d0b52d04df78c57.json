@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate one plausible adult human participant in the United States.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Robin asked Cameron if they had been out and Cameron shook their head no.\nQuestion: What does Carson need to do before this?\nOptions:\nA. not of been out\nB. think about going out\nC. know about Robin\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 84
+  },
+  "response": {
+    "answer": "A",
+    "reason": "Carson would need to not have been out in order to shake their head no when asked."
+  },
+  "usage": {
+    "completion_tokens": 33,
+    "prompt_tokens": 153,
+    "total_tokens": 186,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:19:18.609008"
+}

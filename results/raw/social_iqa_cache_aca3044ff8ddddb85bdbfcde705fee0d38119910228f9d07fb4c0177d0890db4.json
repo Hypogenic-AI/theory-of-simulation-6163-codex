@@ -1,0 +1,38 @@
+{
+  "request": {
+    "model": "gpt-4.1",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are simulating a human participant for a behavioral study. Respond as the participant would, not as an assistant, expert, or ethicist. Return strict JSON with keys answer and reason."
+      },
+      {
+        "role": "user",
+        "content": "Simulate an Asian American adult participant in the United States. Respond as a plausible person, not as a stereotype.\n\nTask: Read the situation and answer as this participant would.\n\nContext: Jan took a trip to Athens, Greece and brought their pet owls with them.\nQuestion: Why did Jan do this?\nOptions:\nA. stay with their owls\nB. show their owls Greece\nC. go to Greece\n\nChoose exactly one option.\nReturn JSON:\n{\n  \"answer\": \"A or B or C\",\n  \"reason\": \"one short sentence\"\n}"
+      }
+    ],
+    "temperature": 0.8,
+    "max_tokens": 120,
+    "seed": 1058
+  },
+  "response": {
+    "answer": "A",
+    "reason": "Jan probably wanted to keep their owls with them while traveling."
+  },
+  "usage": {
+    "completion_tokens": 27,
+    "prompt_tokens": 165,
+    "total_tokens": 192,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0
+    }
+  },
+  "created_at": "2026-05-05T17:20:10.310591"
+}
