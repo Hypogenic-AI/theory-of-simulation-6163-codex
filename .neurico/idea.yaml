@@ -1,0 +1,23 @@
+idea:
+  title: A theory of simulation
+  domain: artificial_intelligence
+  hypothesis: 'Investigate what a theory of simulation would look like in the context
+    of large language models (LLMs), specifically whether LLMs that capture underlying
+    factors behind human behavior can simulate a superset of possible outcomes.
+
+    '
+  background:
+    description: 'What would a theory of simulation look like in the context of LLMs?
+      If LLMs can capture a lot of the underlying factors behind human behavior, can
+      LLMs simulate a super set of outcomes?
+
+      '
+  metadata:
+    author: Chenhao Tan
+    source: IdeaHub
+    source_url: https://hypogenic.ai/ideahub/idea/GzAngY1Njh1bRE3dZXRT
+    idea_id: a_theory_of_simulation_20260505_170202_f7747952
+    created_at: '2026-05-05T17:02:02.330323'
+    status: submitted
+    github_repo_name: theory-of-simulation-6163-codex
+    github_repo_url: https://github.com/Hypogenic-AI/theory-of-simulation-6163-codex
